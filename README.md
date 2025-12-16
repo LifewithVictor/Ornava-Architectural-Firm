@@ -1,3 +1,6 @@
+The documentation for my project to my project can be found on my google doc: https://docs.google.com/document/d/14yh5fdU1sUkmLu2obWWqgJ0o74ZrTltNiXeEi6Zx_94/edit?usp=sharing
+
+
 1) Title & Objective
 
 Technology Choice: React + TypeScript + Vite + Tailwind CSS + Framer Motion
