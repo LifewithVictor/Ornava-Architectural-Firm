@@ -16,7 +16,7 @@ Definition: A modern frontend stack combining React (UI library), TypeScript (st
 Use Cases: Commonly used in the industry for portfolio websites, marketing pages, SaaS landing pages, and any design-focused web application requiring performance, responsiveness, and visual polish.
 Real-World Example: Sites like those of award-winning architecture firms (e.g., Zaha Hadid Architects, BIG – Bjarke Ingels Group) or creative agencies often use similar React/Tailwind stacks for their clean, animated, image-heavy portfolios.
 
-3) 3. System Requirements
+3) System Requirements
 
 Node.js ≥ 18 (recommended LTS version as of 2025)
 npm (or yarn/pnpm)
@@ -25,3 +25,4 @@ No additional external tools required beyond standard web development setup
 Dependencies (as listed in package.json):
 Core: react, react-dom, framer-motion, lucide-react
 Dev: vite, tailwindcss, typescript, autoprefixer, postcss
+
