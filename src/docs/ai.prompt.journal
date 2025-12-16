@@ -1,0 +1,81 @@
+I'm proficient when it comes to HTML and CSS. I'm on a journey to learning webdevelopment. For my project I've worked on a mock up Architecture Website. The project type is React + TypeScript Modern Web Application. The styling is Tailwind CSS 3.14.7.
+The prompting journey was super interesting I'd like to walk you through it.
+Prompt 1: Theme Toggle Component
+     Prompt: Create a dark/light mode toggle component in React with TypeScript for a Tailwind CSS project. 
+
+Requirements:
+- Use localStorage to persist the theme across page reloads
+- Detect and respect the user's system preference on first load (prefers-color-scheme)
+- Toggle the 'dark' class on the html element (Tailwind darkMode: 'class')
+- Use Lucide React icons: Sun for dark mode, Moon for light mode
+- Smooth rotation animation with Framer Motion when switching
+- Small, rounded button with subtle background and hover states that match a warm brown palette (bg-brown-100/dark:bg-brown-900)
+- Fully accessible (aria-label)
+
+Export as default ThemeToggle component.
+
+Response Summary:
+AI delivered a near-perfect ThemeToggle.tsx with useState + useEffect logic, localStorage handling, matchMedia detection, Framer Motion rotate animation, and Tailwind classes exactly as specified.
+
+Prompt 2: Navbar with Scroll Effect & Mobile Menu
+Prompt: Build a modern sticky navbar in React + TypeScript + Tailwind for an architecture portfolio site.
+Features needed:
+- Fixed at top, full-width, z-50
+- Transparent background when at top, becomes solid white/near-black with backdrop-blur and shadow when scrolled >50px
+- Logo "ORNAVA" on left (bolder when scrolled)
+- Desktop horizontal links: Home, Projects, Testimonials, Contact (smooth scroll to sections)
+- ThemeToggle component integrated on the right
+- Mobile: hamburger menu (Lucide Menu/X) that opens a full-width slide-down menu with AnimatePresence from Framer Motion
+- Use warm brown accents for text/hover states in light mode, stone in dark mode
+- Smooth transitions everywhere
+
+Import and use the existing ThemeToggle component.
+
+Response Summary:
+Produced a clean Navbar.tsx with scroll listener useEffect, conditional classes, mobile state, and Framer Motion slide animation. Color transitions matched the palette perfectly.
+
+Prompt 3: Project Card & Gallery Modal System
+Prompt: Create two interconnected components for a project gallery in a React + Tailwind architecture portfolio:
+1. ProjectCard:
+- Props: title, category, image (string url), onClick
+- Aspect ratio 4:5 image with object-cover
+- On hover: slight lift (y-10), image scale-110, overlay with large white Plus icon in circle
+- Below image: uppercase category in small brown-500, title in larger font with hover color change
+
+2. GalleryModal:
+- Controlled by parent (isOpen, onClose, images: string[], title)
+- Full-screen fixed overlay with backdrop blur
+- Framer Motion fade/scale entrance
+- Click outside or X button to close
+- If multiple images: left/right chevron navigation with circular prev/next buttons
+- Show counter "2 / 5" at bottom
+- Current image object-contain in aspect-video container
+
+Use Lucide icons and warm brown overlay colors.
+
+Response Summary:
+Delivered both ProjectCard.tsx and GalleryModal.tsx with flawless hover effects, navigation logic, counter, and animations. Modal click-outside handling was perfect.
+
+Prompt 4: Projects Section with Hardcoded Data
+Prompt: Create a Projects section component that:
+- Displays a grid of ProjectCards (3 columns on lg, 2 on md, 1 on mobile)
+- Hardcode 6 architecture projects with realistic titles (e.g., "The Brick House", "Hillside Retreat"), categories (Residential, Commercial, Interior), and Unsplash image URLs for main image
+- Each project has a gallery array of 3 different Unsplash architecture images
+- Manage modal state internally: clicking a card opens GalleryModal with that project's title and gallery
+- Section has heading "Selected Works" with brown underline accent and descriptive paragraph
+
+Use the ProjectCard and GalleryModal components we already have.
+
+Response Summary:
+Generated complete Projects.tsx with realistic data, internal state for selected project, and perfect integration of the two child components.
+
+Prompt 5: Contact Form with Simulated Submission
+Prompt: Build a split-layout Contact section with:
+Build a split-layout Contact section with:
+- Left side: heading "Let's Build Something Extraordinary", description, address, email, phone (placeholder data)
+- Right side: responsive form (name, email, message) with Tailwind styling matching brown palette
+- Simulated submission: on submit, disable button, show "Sending..." → after 1.5s show "Message Sent" in green button for 5s → reset form
+- No real backend — just client-side simulation
+- Use Lucide Send icon on submit button
+
+Make it fully accessible and mobile-friendly.
